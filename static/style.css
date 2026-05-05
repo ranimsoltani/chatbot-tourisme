@@ -181,3 +181,50 @@ button:hover {
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.top-buttons button {
+  
+  padding: 15px 25px; 
+  
+
+  min-width: 140px; 
+  
+  
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 2px solid #4a90e2;
+  background-color: white;
+  color: #4a90e2;
+  font-weight: bold;
+  font-size: 14px; 
+  border-radius: 12px; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+
+.top-buttons button:hover {
+  background-color: #4a90e2;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+.top-buttons button img, .top-buttons button i {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
