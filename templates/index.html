@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Voyage AI</title>
+
+  <!-- ✅ Flask CSS link -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="header">
+    🌍 Chat Voyage AI
+  </div>
+
+  <div class="chat" id="chat">
+    <div class="msg bot">👋 Salut ! Où veux-tu voyager ?</div>
+  </div>
+
+  <div class="input-area">
+    <input id="input" type="text" placeholder="Écris ton message...">
+    <button onclick="send()">➤</button>
+  </div>
+
+</div>
