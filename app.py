@@ -29,4 +29,4 @@ def chat():
         ]
     )
     bot_reply = response.choices[0].message.content
-    
+    return jsonify({"reply": bot_reply})
