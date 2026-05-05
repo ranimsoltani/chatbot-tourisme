@@ -1,0 +1,60 @@
+******* Définition Chatbot 
+Un chatbot (contraction de chat + robot) est un programme informatique conçu pour simuler une 
+conversation humaine via du texte ou de la voix. Il interagit avec les utilisateurs en temps réel à 
+travers des interfaces comme les sites web, les applications mobiles ou les messageries instantanées. 
+Il peut fonctionner selon des règles prédéfinies ou grâce à l'intelligence artificielle.
+
+
+******* Types de chatbots
+Chatbot basé sur des règles (Rule-based) :
+   le plus simple. Il suit des scripts et des arbres de décision fixes. Il ne peut répondre qu'aux questions prévues à l'avance. Utilisé pour les FAQ et les menus interactifs.
+Chatbot NLP (Natural Language Processing) :
+   utilise le traitement automatique du langage naturel pour détecter l'intention de l'utilisateur et les entités dans sa phrase, sans être un LLM complet. Exemples : Rasa, Dialogflow, Wit.ai.
+Chatbot IA / LLM-based :
+   le plus avancé. Il utilise un grand modèle de langage (GPT, Claude, Gemini) pour comprendre et générer du texte naturel de façon flexible et contextuelle.
+Chatbot hybride : 
+   combine les règles et l'IA. Il utilise les règles pour les cas simples et l'IA pour les requêtes complexes. Exemples : Zendesk AI, Intercom.
+Voice bot :
+   chatbot vocal qui reconnaît la parole (Speech-to-Text) et génère de la voix (Text-to-Speech). Exemples : Alexa, Siri, Google Assistant.
+Social media bot :
+   opère sur les réseaux sociaux (WhatsApp, Messenger, Telegram) pour automatiser les interactions avec les clients. Exemples : ManyChat, Chatfuel.
+
+
+******* Définition Intelligence Artificielle IA
+L'Intelligence Artificielle est un ensemble de techniques informatiques permettant à une machine d'imiter 
+des comportements humains comme le raisonnement, l'apprentissage, la compréhension du langage et la prise 
+de décision. Elle constitue la base de tous les chatbots modernes.
+
+
+*******Chatbots IA populaires
+ChatGPT (OpenAI) :
+   le chatbot IA le plus populaire au monde, basé sur le modèle GPT-4o. Il supporte le texte, l'image et la voix. Intégrable via la bibliothèque Python openai.
+Claude (Anthropic) :
+   modèle de référence pour la sécurité et le raisonnement. Son API est simple à utiliser et excellente pour les applications conversationnelles.
+Gemini (Google) :
+   modèle multimodal de Google, intégrable via google-generativeai. Disponible gratuitement jusqu'à certains quotas.
+Llama 3 (Meta) :
+   modèle open source hébergeable localement via Ollama. Idéal pour la confidentialité des données car aucune donnée ne sort du serveur.
+Mistral AI : 
+   modèle français performant, utilisable en API cloud ou en local. Excellent rapport qualité/coût pour les applications Flask.
+Rasa :
+   framework open source NLP entièrement auto-hébergé, conçu pour des workflows de chatbot personnalisés et complexes.
+
+
+******* Définition IDE 
+Un IDE (Integrated Development Environment / Environnement de Développement Intégré) est un logiciel qui regroupe tous les outils nécessaires au développement d'un programme : un éditeur de code, un débogueur, un terminal et souvent un gestionnaire de versions (Git).
+VS Code (Visual Studio Code) :
+    éditeur de code gratuit et open source développé par Microsoft. Léger, extensible grâce à des milliers d'extensions, il supporte tous les langages dont Python et Flask. C'est le plus recommandé pour les projets IA/chatbot.
+PyCharm :
+    IDE dédié exclusivement à Python, développé par JetBrains. Il offre un débogueur puissant, la gestion automatique des environnements virtuels (venv) et un refactoring intelligent. La version Community est gratuite, la version Professional est payante.
+Thonny :
+    IDE Python minimaliste conçu spécifiquement pour les débutants. Il est très simple d'utilisation mais limité pour des projets Flask ou IA en production.
+
+
+*******Choix de l'IDE
+Nous avons choisi Visual Studio Code (VS Code) car il est entièrement gratuit et open source, léger et 
+rapide au démarrage, contrairement à PyCharm qui consomme beaucoup de ressources. Il dispose d'un terminal
+intégré permettant d'exécuter les commandes Flask directement, d'une gestion native de Git, et d'un large
+écosystème d'extensions dédiées à Python et Flask. De plus, Thonny ne supporte pas les projets Flask ni 
+les bibliothèques d'intelligence artificielle. VS Code est donc l'IDE le plus adapté à notre projet de 
+chatbot basé sur Flask et l'IA.
