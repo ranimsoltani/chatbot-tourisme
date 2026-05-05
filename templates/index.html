@@ -33,6 +33,7 @@
   </div>
 
 </div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
 async function send() {
   let input = document.getElementById("input");
@@ -63,7 +64,7 @@ async function send() {
   // bot message
   let bot = document.createElement("div");
   bot.className = "msg bot";
-  bot.innerText = data.reply;
+  bot.innerHTML = marked.parse(data.reply);
   chat.appendChild(bot);
 
   chat.scrollTop = chat.scrollHeight;
