@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat Voyage AI</title>
 
-  <!-- ✅ Flask CSS link -->
+ 
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
@@ -15,6 +15,12 @@
 
   <div class="header">
     🌍 Chat Voyage AI
+  </div>
+
+  <div class="top-buttons">
+  <button onclick="newChat()">🆕 Nouveau chat</button>
+  <button onclick="showHistory()">📜 Historique</button>
+  <button onclick="clearChat()">🗑️ Effacer</button>
   </div>
 
   <div class="chat" id="chat">
