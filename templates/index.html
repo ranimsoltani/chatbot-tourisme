@@ -27,3 +27,42 @@
   </div>
 
 </div>
+<script>
+async function send() {
+  let input = document.getElementById("input");
+  let chat = document.getElementById("chat");
+
+  if (!input.value.trim()) return;
+
+  // user message
+  let user = document.createElement("div");
+  user.className = "msg user";
+  user.innerText = input.value;
+  chat.appendChild(user);
+
+  let message = input.value;
+  input.value = "";
+
+  // call Flask backend
+  let res = await fetch("/chat", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ message: message })
+  });
+
+  let data = await res.json();
+
+  // bot message
+  let bot = document.createElement("div");
+  bot.className = "msg bot";
+  bot.innerText = data.reply;
+  chat.appendChild(bot);
+
+  chat.scrollTop = chat.scrollHeight;
+}
+</script>
+
+</body>
+</html>
