@@ -30,3 +30,22 @@ def chat():
     )
     bot_reply = response.choices[0].message.content
     return jsonify({"reply": bot_reply})
+@app.route('/chat', methods=['POST'])
+def chat():
+    try:
+        user_message = request.json.get("message")
+
+        response = client.chat.completions.create(
+            model="llama3-8b-8192",
+            messages=[
+                {"role": "system", "content": "You are a tourism assistant."},
+                {"role": "user", "content": user_message}
+            ]
+        )
+
+        bot_reply = response.choices[0].message.content
+
+        return jsonify({"reply": bot_reply})
+
+    except Exception as e:
+        return jsonify({"error": str(e)})
