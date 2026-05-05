@@ -10,3 +10,5 @@ client = OpenAI(
     api_key=api_key,
     base_url="https://api.groq.com/openai/v1"
 )
+
+app = Flask(__name__, static_folder='static', template_folder='templates')
