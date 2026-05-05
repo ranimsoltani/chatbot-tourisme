@@ -28,3 +28,5 @@ def chat():
             {"role": "user", "content": user_message}
         ]
     )
+    bot_reply = response.choices[0].message.content
+    
