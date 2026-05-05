@@ -58,3 +58,22 @@ intégré permettant d'exécuter les commandes Flask directement, d'une gestion 
 écosystème d'extensions dédiées à Python et Flask. De plus, Thonny ne supporte pas les projets Flask ni 
 les bibliothèques d'intelligence artificielle. VS Code est donc l'IDE le plus adapté à notre projet de 
 chatbot basé sur Flask et l'IA.
+
+******Flask :
+Flask est un micro-framework web écrit en Python qui permet de développer des applications web et des API de manière simple et rapide. 
+fonctionne avec des routes : chaque URL appelle une fonction Python qui renvoie une réponse (HTML, texte ou JSON).
+
+********Natural Language Processing (TALN) :
+Le NLP (Traitement Automatique du Langage Naturel - TALN) est une discipline de l’intelligence artificielle qui permet aux ordinateurs de comprendre, analyser, interpréter et générer le langage humain, que ce soit sous forme de texte ou de parole. 
+
+******Machine Learning :
+Le Machine Learning permet aux ordinateurs d’apprendre à partir de données sans règles programmées à l’avance.
+la machine analyse des exemples et apprend à faire des prédictions ou des décisions.
+
+******Deep Learning :
+Le Machine Learning (apprentissage automatique) est une branche de l’intelligence artificielle qui permet à une machine d’apprendre à partir de données et d’améliorer ses performances sans être explicitement programmée pour chaque tâche
+
+*******Large Language Model :
+Un LLM (Large Language Model) est un modèle d’IA entraîné sur une énorme quantité de texte pour comprendre et générer du langage humain.
+
+
