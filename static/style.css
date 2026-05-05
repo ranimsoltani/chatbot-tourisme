@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(rgba(135, 206, 235, 0.35), rgba(25, 118, 210, 0.55)),
+    url('https://images.unsplash.com/photo-1508615070457-7baeba4003ab?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* ☁️ clouds layer 1 */
+body::before {
+  content: "☁️        ☁️\A\A   ☁️        ☁️\A\A        ☁️";
+  position: absolute;
+  top: 8%;
+  left: -20%;
+  font-size: 80px;
+  opacity: 0.22;
+  white-space: pre;
+  animation: clouds 35s linear infinite;
+}
+
+/* ☁️ clouds layer 2 */
+.app::before {
+  content: "☁️     ☁️\A\A     ☁️     ☁️\A\A☁️     ☁️     ☁️";
+  position: absolute;
+  top: 45%;
+  left: -30%;
+  font-size: 70px;
+  opacity: 0.18;
+  white-space: pre;
+  animation: clouds2 45s linear infinite;
+  z-index: 0;
+}
+
+@keyframes clouds {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(120vw); }
+}
+
+@keyframes clouds2 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(140vw); }
+}
+
+/* ✈️ airplane layer 1 */
+body::after {
+  content: "✈️\A\A        ✈️";
+  position: absolute;
+  font-size: 80px;
+  top: 25%;
+  left: -120px;
+  opacity: 0.3;
+  white-space: pre;
+  animation: fly 18s linear infinite;
+}
+
+/* ✈️ airplane layer 2 */
+.app::after {
+  content: "✈️\A\A    ✈️";
+  position: absolute;
+  font-size: 60px;
+  top: 65%;
+  left: -100px;
+  opacity: 0.25;
+  white-space: pre;
+  animation: fly2 22s linear infinite;
+  z-index: 0;
+}
+
+@keyframes fly {
+  0% { transform: translateX(0) translateY(0) rotate(10deg); }
+  50% { transform: translateX(60vw) translateY(-40px) rotate(10deg); }
+  100% { transform: translateX(120vw) translateY(0) rotate(10deg); }
+}
+
+@keyframes fly2 {
+  0% { transform: translateX(0) translateY(0) rotate(5deg); }
+  50% { transform: translateX(70vw) translateY(30px) rotate(5deg); }
+  100% { transform: translateX(130vw) translateY(0) rotate(5deg); }
+}
+
+.app {
+  width: 380px;
+  height: 600px;
+  background: rgba(255,255,255,0.28);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.35);
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #0f172a;
+  background: rgba(255,255,255,0.5);
+}
+
+.chat {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.msg {
+  padding: 10px 14px;
+  border-radius: 15px;
+  max-width: 75%;
+  font-size: 14px;
+  animation: pop 0.2s ease;
+}
+
+.user {
+  align-self: flex-end;
+  background: #2563eb;
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+.bot {
+  align-self: flex-start;
+  background: rgba(255,255,255,0.75);
+  color: #0f172a;
+  border-bottom-left-radius: 5px;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  background: rgba(255,255,255,0.5);
+  position: relative;
+  z-index: 2;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.8);
+  color: #0f172a;
+}
+
+input::placeholder {
+  color: #475569;
+}
+
+button {
+  width: 45px;
+  border: none;
+  border-radius: 12px;
+  background: #1d4ed8;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+@keyframes pop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
