@@ -16,3 +16,7 @@ app = Flask(__name__, static_folder='static', template_folder='templates')
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/chat', methods=['POST'])
+def chat():
+    user_message = request.json.get("message")
