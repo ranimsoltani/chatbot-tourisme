@@ -76,4 +76,72 @@ Le Machine Learning (apprentissage automatique) est une branche de l’intellige
 *******Large Language Model :
 Un LLM (Large Language Model) est un modèle d’IA entraîné sur une énorme quantité de texte pour comprendre et générer du langage humain.
 
+*******Bibliothèques utilisées pour un chatbot:
+Dans un chatbot Python, plusieurs bibliothèques sont utilisées pour gérer le serveur, sécuriser les données et intégrer l’intelligence artificielle. Dans notre projet, voici les bibliothèques que nous avons utilisées :
+   -Flask: bibliothèque Python qui permet de créer facilement un serveur web pour ton chatbot. Elle sert à recevoir les messages de l’utilisateur, gérer les routes et envoyer les réponses entre le frontend et l’IA.
+      -render_template : une fonction de Flask utilisée pour afficher des pages HTML. Elle permet de connecter le backend Python avec les fichiers frontend (HTML).
+      -request : une fonctionnalité de Flask qui permet de récupérer les données envoyées par l’utilisateur (ex : message du chatbot via un formulaire ou une requête API).
+      -jsonify : une fonction de Flask utilisée pour transformer les données Python en format JSON. Elle est souvent utilisée pour envoyer la réponse du chatbot vers le frontend de manière structurée.
+   -python-dotenv: permet de charger les variables d’environnement depuis un fichier .env, comme les clés API. Cela rend le projet plus sécurisé et mieux organisé.
+   -OpenAI Python SDK et Groq Python SDK : sont utilisés pour connecter le chatbot à des modèles d’IA capables de comprendre et générer du texte naturel. Ils sont le cœur intelligent du système.
+   -Python os module : est une bibliothèque intégrée à Python qui permet d’interagir avec le système d’exploitation. Elle sert notamment à accéder aux variables d’environnement, gérer des chemins de fichiers et récupérer certaines informations du système.
 
+*******API, Groq et OpenAI:
+
+API : est une interface qui permet à deux applications de communiquer entre elles.
+   Dans un chatbot :
+   - elle envoie le message de l’utilisateur à l’IA
+   - elle reçoit la réponse générée
+   - elle connecte le backend au modèle d’intelligence artificielle
+
+Groq Python SDK : une API qui permet d’utiliser des modèles de langage très rapides.
+   Avantages :
+   - Très rapide (réponse quasi instantanée) 
+   - Faible latence
+   - Bonne performance pour les chatbots en temps réel
+   
+   Inconvénients :
+   - Moins de fonctionnalités avancées que certains autres modèles
+   - Moins flexible selon les cas d’usage
+
+OpenAI Python SDK : l’API officielle des modèles GPT.
+   Avantages :
+   - Très intelligente et précise
+   - Gère bien le langage naturel
+   - Fonctionnalités avancées (mémoire, outils, fonctions, etc.)
+
+   Inconvénients :
+   - Plus coûteuse 
+   - Peut être plus lente que Groq selon les cas
+
+********LLaMA et comparaison avec d’autres modèles d’IA:
+LLaMA est une famille de modèles de langage développée par Meta.
+
+Caractéristiques :
+   Modèle open-source (selon versions)
+   Très utilisé pour la recherche et les projets personnalisés
+   Peut être exécuté localement ou via des APIs
+   Bonne performance avec moins de ressources que certains modèles fermés
+
+Comparaison des principaux modèles:
+   OpenAI GPT 
+      - Très haute qualité de réponse
+      - Excellent en compréhension du langage
+      - Plus coûteux mais très puissant
+   Groq Python SDK
+      - Utilise souvent des modèles LLaMA optimisés
+      - Extrêmement rapide 
+      - Idéal pour chatbots en temps réel
+      - Moins riche en fonctionnalités que GPT dans certains cas
+   Google Gemini
+      - Modèle développé par Google DeepMind
+      - Très bon en raisonnement et multimodal (texte + image)
+      - Intégré dans l’écosystème Google
+
+Comparaison:
+Modèle	     | Avantages	                | Inconvénients
+
+LLaMA	        | Open-source, flexible      | nécessite setup technique
+GPT (OpenAI)  | très intelligent, précis   |	coûteux
+Groq	        | ultra rapide               | moins flexible
+Gemini	     | multimodal, puissant	    | dépend Google
