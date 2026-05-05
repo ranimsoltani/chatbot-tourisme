@@ -23,7 +23,7 @@ def chat():
         user_message = request.json.get("message")
 
         response = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.3-70b-versatile",
             messages=[
                 {"role": "system", "content": "You are a tourism assistant."},
                 {"role": "user", "content": user_message}
