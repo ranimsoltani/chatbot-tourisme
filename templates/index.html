@@ -36,6 +36,42 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
+let history = [];
+
+
+function showHistory() {
+  let chat = document.getElementById("chat");
+
+  chat.innerHTML = "";
+
+  if (history.length === 0) {
+    chat.innerHTML = `<div class="msg bot">📜 Aucun historique</div>`;
+    return;
+  }
+
+  history.forEach(item => {
+    let user = document.createElement("div");
+    user.className = "msg user";
+    user.textContent = item.user;
+
+    let bot = document.createElement("div");
+    bot.className = "msg bot";
+    bot.innerHTML = item.bot;
+
+    chat.appendChild(user);
+    chat.appendChild(bot);
+  });
+
+  chat.scrollTop = chat.scrollHeight;
+}
+function clearChat() {
+  let chat = document.getElementById("chat");
+
+  chat.innerHTML = `<div class="msg bot"> Nouveau chat </div>`;
+
+  history = [];
+}
+
 async function send() {
   let input = document.getElementById("input");
   let chat = document.getElementById("chat");
@@ -67,8 +103,19 @@ async function send() {
   bot.className = "msg bot";
   bot.innerHTML = marked.parse(data.reply);
   chat.appendChild(bot);
+  history.push({
+  user: message,
+  bot: marked.parse(data.reply)
+  });
 
   chat.scrollTop = chat.scrollHeight;
+}
+function newChat() {
+  let chat = document.getElementById("chat");
+
+  chat.innerHTML = `<div class="msg bot">👋 Nouveau chat </div>`;
+
+  history = [];
 }
 </script>
 
