@@ -36,7 +36,7 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
-let history = [];
+let history = JSON.parse(localStorage.getItem("h")) || [];
 
 
 function showHistory() {
@@ -109,6 +109,7 @@ async function send() {
   });
 
   chat.scrollTop = chat.scrollHeight;
+  localStorage.setItem("h", JSON.stringify(history));
 }
 function newChat() {
   let chat = document.getElementById("chat");
